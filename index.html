@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MathVidhyarthi | Class 12 Maths All Boards</title>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+body{margin:0;font-family:Arial;background:#f2f4f7}
+header,footer{background:#0d47a1;color:#fff;text-align:center;padding:15px}
+nav{background:#1565c0;text-align:center;padding:10px}
+nav button{margin:5px;padding:8px 12px;border:none;border-radius:4px}
+.section{display:none;padding:15px}
+.box{background:#fff;padding:15px;margin-bottom:15px;border-radius:6px;box-shadow:0 0 6px #ccc}
+button{background:#0d47a1;color:#fff;border:none;border-radius:4px;padding:8px;margin-top:5px}
+input,textarea{width:100%;padding:8px;margin:5px 0}
+.chat{border:1px solid #ccc;height:250px;overflow:auto;padding:10px}
+.user{color:#0d47a1}
+.bot{color:green}
+</style>
+</head>
+<body>
+<header>
+<h1>📘 MathVidhyarthi</h1>
+<p>Class 12 Maths – All Boards</p>
+</header>
+<nav>
+<button onclick="show('home')">Home</button>
+<button onclick="show('chapters')">Chapters</button>
+<button onclick="show('ai')">AI Chat</button>
+<button onclick="show('support')">Support</button>
+</nav>
+<div id="home" class="section" style="display:block">
+<div class="box">
+<h3>Welcome Students 👋</h3>
+<p>Free AI Maths Help for All Boards</p>
+</div>
+</div>
+<div id="chapters" class="section">
+<div class="box">
+<h3>Determinants</h3>
+\[
+\begin{vmatrix}
+1 & 2 & 3\\
+4 & 5 & 6\\
+7 & 8 & 9
+\end{vmatrix}
+\]
+<p><b>Answer:</b> 0</p>
+</div>
+</div>
+<div id="ai" class="section">
+<div class="box">
+<h3>🤖 AI Maths Chat (Demo)</h3>
+<div class="chat" id="chat"></div>
+<input id="q" placeholder="Ask maths question">
+<button onclick="demoAI()">Send</button>
+</div>
+</div>
+<div id="support" class="section">
+<div class="box">
+<h3>Customer Support</h3>
+<textarea placeholder="Describe your issue"></textarea>
+<button>Submit</button>
+</div>
+</div>
+<footer>
+© 2026 MathVidhyarthi
+</footer>
+<script>
+function show(id){
+document.querySelectorAll('.section').forEach(s=>s.style.display='none');
+document.getElementById(id).style.display='block';
+}
+function demoAI(){
+let q=document.getElementById("q").value;
+let chat=document.getElementById("chat");
+chat.innerHTML+="<div class='user'>You: "+q+"</div>";
+let ans="Please ask Class 12 Maths question.";
+if(q.toLowerCase().includes("integral")) ans="∫x² dx = x³/3 + C";
+chat.innerHTML+="<div class='bot'>AI: "+ans+"</div>";
+document.getElementById("q").value="";
+}
+</script>
+</body>
+</html>
